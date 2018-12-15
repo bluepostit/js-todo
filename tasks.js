@@ -30,13 +30,12 @@ var Tasks = {
 		this.domElement.empty();
 		for(var i = 0; i < this.tasks.length; i++) {
 			var task = this.tasks[i];
-			var liClass = "task";
+			var liClass = "task cat-" + task.category;
 			var cbChecked = "";
 			if(task.isCompleted) {
 				liClass += " completed";
 				cbChecked = "checked";
 			}
-			liClass += (" cat-" + task.category);
 			this.domElement.append(
 				'<li class="' + liClass + '" data-task="' + i + '">'
 				+ '<label><input type="checkbox" class="is-completed" '
